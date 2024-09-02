@@ -26,8 +26,8 @@ const requestListener = function(req, res) {
 //create http server
 const server = http.createServer(requestListener);
 
-const host = "0.0.0.0";
-const port = "8080";
+const host = "127.0.0.1";   // this is always your computer (local host)
+const port = "3000";        // typical port used from home computer
 
 server.listen(
     port,
