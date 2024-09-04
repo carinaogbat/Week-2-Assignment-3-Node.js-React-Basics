@@ -1,14 +1,14 @@
 [
     {
-        "firstName": "Rhea",
-        "link": ""
+        "name":"Orion",
+        "bio":"Orion came to us when she weighed only a few ounces. She was accidentally left in the back of a pick up truck by her mother. We spent a full month bottle feeding her and she has grown into a big, fluffy, and beautiful cat. Unfortunately Orion is very very spicy. So spicy in fact, that a lot of the times we have to avoid her when we're in the house. The spicyness hits randomly, so we never know what we're going to get. A neighbor even nicknamed her \"Mr. Steal-Your-Face\" because she will literally try and take your face off. Whoops."
     },
     {
-        "firstName": "Artemis",
-        "link": ""
+        "name":"Rhea",
+        "bio":"Rhea is a very rambunctious and naughty black kitty. She always keeps her human on her toes. Things Rhea has done over the past month include: getting stuck in the neighbor's yard, getting stuck on the neighbor's roof, getting stuck on her own roof, going into the washing machine, going into the dryer, knocking over the air filter, and generally causing havoc."
     },
     {
-        "firstName": "Orion",
-        "link": ""
+        "name":"Artemis",
+        "bio": "Artemis is really just an old lady trapped in a kitten's body. She's a very hefty, slow, and shy girl and rarely gets into any sort of trouble."
     }
 ]
