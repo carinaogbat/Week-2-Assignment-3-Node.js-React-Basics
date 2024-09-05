@@ -1,14 +1,21 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- need meta viewport tag to allow for css media queries on mobile -->
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>React Import External JSON</title>
-	<!-- local css -->
-	<style>
 
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>Importing External JSON into React</title>
+	<!-- custom css -->
+	<style>
+    ul {
+      list-style-type: none;
+    }
+
+    .petName {
+      font-style: bold;
+      font-size: large;
+    }
 	</style>
-  <!-- laoding jQuery -->
+  <!-- loading jQuery -->
   <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
   <!-- loading React -->
   <script src="https://unpkg.com/react/umd/react.development.js" crossorigin></script>
@@ -20,33 +27,35 @@
 <body>
 
   <h1>My Cats</h1>
-  <img src="/imgs/RheaWebMed.jpg">
 
-  <div id="myApp"></div>
-  <!-- load our custom script with react component -->
+
+  <div id="App"></div>
+
   <script type="text/babel">
     "use strict";
-    // define a react page component using JSX
+
+    // creating the React component
     function CatList(props) {
-      console.log(props);
-      // return some output for the component
+
+      console.log(props);   // logging the props to the console
+
+      // this return is returning my entire app
       return (
         <div>
           <ul>
             {
-              // use map() to loop thru array passed in props.list
+                // map loops through all your objects and performs the same action on them
               props.list.map(
-                // copy current array value into item and pass to arrow function
-                // whenever we define a function inside a JSX expression, we have to use
-                // round parens instead of curlies to contain the function's code block
+
                 (item,index) => (
                   <li key={index}>
-                    <p>
+                    <p className = "petName">
                       {item.name}
+                    </p>
+                    <p>
                       {item.bio}
                     </p>
                     
-             
                   </li>
                 )
               )
@@ -56,16 +65,15 @@
       );
     }
 
-    // use jQuery to load the JSON data from our server
+    // loading JSON with jQuery
     $.getJSON(
-      'x', // url for jquery to ask for json from
-      function(jsonFromJquery) {
-        // after JSON loaded, call react createRoot() to identify root HTML element for app
-        // creating a root React element
-        const myRoot = ReactDOM.createRoot( document.getElementById('myApp') );
-        // then call react render() to output JSX component into existing root element
+      'x', 
+      function(jsonFile) {
+        //creating a root element for React to target
+        const myRoot = ReactDOM.createRoot( document.getElementById('App') );
+        // rendering the root element
         myRoot.render(
-          <CatList list={jsonFromJquery} />
+          <CatList list={jsonFile} />
         );
       }
     );
