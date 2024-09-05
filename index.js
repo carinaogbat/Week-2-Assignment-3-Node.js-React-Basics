@@ -14,7 +14,7 @@ const requestListener = function(req, res) {
             }
         );
     } else {
-        fs.readFile(__dirname + "/data.json")
+        fs.readFile(__dirname + "/catData.json")
         .then(contents => {
             res.setHeader("Content-Type", "application/json; charset-UTF-8");
             res.writeHead(200);
